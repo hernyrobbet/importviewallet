@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/btc4.jpg);
+    background-position: center;
+    font-family: 'roboto',sans-serif;
+}
+.container{
+    position: relative;
+    width: 90%;
+    height: 87vh;
+    border: 5px solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.logout a {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    padding:10px 20px ;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #fff;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    text-decoration: underline;
+}
+
+.logout:hover {
+    color: #267591;
+}
+.text{
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.loading{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading .line-box{
+    padding: 0;
+    width: 40%;
+    height: 24px;
+    border: 2px solid #267591;
+    border-radius: 20px;
+}
+.loading .line-box .line{
+    height: 20px;
+    border-radius: 20px;
+    background: #67D295;
+    animation: loading 360s forwards cubic-bezier(0,0,0,0);
+}
+
+@keyframes loading{
+    0%{
+        width: 0%;
+    }
+    50%{
+        width:50%;
+    }
+    100%{
+        width:100%;
+    }
+}

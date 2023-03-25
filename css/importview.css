@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+ }
+ body{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/wal-btc2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0 10px;
+}
+
+.wrapper{
+    max-width: 500px;
+    width: 100%;
+    background: transparent;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.125);
+}
+.wrapper .title{
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #fec107;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Play', sans-serif;
+}
+.wrapper .from{
+    width: 100%;
+}
+.wrapper .from .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    
+}
+.wrapper .from .input_field label{
+    width: 200px;
+    color: #fff;
+    margin-right: 10px;
+    font-size: 16px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+}
+.wrapper .from .input_field .input, .wrapper .from .input_field .textarea{
+    width: 100%;
+    outline: none;
+    border: none;
+    font-size: 12px;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+    padding: 8px 10px ;
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 300;
+}
+.wrapper .from .input_field .input::placeholder,
+.wrapper .from .input_field .textarea::placeholder{
+    color: #000;
+}
+.wrapper .from .input_field .input:focus:hover,
+.wrapper .from .input_field .textarea:hover{
+    background: #fff;
+    color: #000;
+}
+.wrapper .from .input_field .input:focus::placeholder{
+    color: #000;
+}
+.wrapper .from .input_field .input:is(:focus,:valid){
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+.wrapper .from .input_field .textarea{
+    resize: none;
+    height: 125px;
+}
+.wrapper .from .input_field .input:focus,
+.wrapper .from .input_field .textarea:focus{
+    border: 1px solid #fec107;
+}
+.wrapper .from .input_field p{
+    font-size: 14px;
+    color: #fff;
+    margin-top: 15px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: 500;
+}
+.wrapper .from .input_field .check{
+    width: 15px;
+    height: 15px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+}
+.wrapper .from .input_field .check input[type="checkbox"]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+.wrapper .from .input_field .check .checkmark{
+    width: 15px;
+    height: 15px;
+    border: 1px solid #fec107;
+    display: block;
+    position: relative;
+    
+}
+.wrapper .from .input_field .check .checkmark::before{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 3px;
+    width: 7px;
+    height: 4px;
+    border: 2px solid;
+    border-color: transparent transparent #fff #fff;
+    transform: rotate(-45deg);
+    display: none;
+}
+.wrapper .from .input_field .check input[type="checkbox"]:checked ~ .checkmark{
+    background: #fec107;
+}
+.wrapper .from .input_field .check input[type="checkbox"]:checked ~ .checkmark::before{
+    display: block;
+}
+.wrapper .from .input_field .btn{
+    width: 100%;
+    padding: 8px 10px;
+    font-size: 15px;
+    border: 0;
+    background: #fec107;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    outline: none;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-weight: bold;
+}
+.wrapper .from .input_field:last-child{
+    margin-bottom: 0;
+}
+.wrapper .from .input_field .btn:hover{
+    background: #ffd658;
+}
+
+
+@media (max-width: 420px){
+    .wrapper .from .input_field{
+        flex-direction: column;
+        align-items: flex-start;
+    } 
+
+    .wrapper .from .input_field label{
+        margin-bottom: 5px;
+    }
+
+    .wrapper .from .input_field.terms{
+        flex-direction: row;
+    }
+}
